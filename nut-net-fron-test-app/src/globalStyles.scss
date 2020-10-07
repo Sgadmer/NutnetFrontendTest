@@ -1,0 +1,15 @@
+html {
+  font-size: 16px;
+}
+
+.contentWrapper {
+  min-width: 942px;
+  width: 58.88%;
+  max-width: 1920px;
+}
+
+a {
+  &:hover {
+    cursor: pointer;
+  }
+}
