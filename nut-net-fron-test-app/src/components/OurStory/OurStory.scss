@@ -1,0 +1,41 @@
+@import "../../globalVariables.scss";
+
+.ourStoryWrapper {
+  margin: 70px 0;
+  background-color: $brightColor;
+  display: flex;
+  justify-content: center;
+
+  .ourStory {
+    display: flex;
+    justify-content: flex-end;
+
+    &__logo {
+      width: 235px;
+      height: 230px;
+      margin-right: 130px;
+    }
+
+    &__content {
+      width: 665px;
+      color: $darkColor;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      h1 {
+        font-family: "Playfair Display", serif;
+        font-weight: 600;
+        font-size: 1.8rem;
+        letter-spacing: 0.03em;
+      }
+
+      p {
+        font-family: "Roboto", sans-serif;
+        font-size: 1.14rem;
+        font-weight: 300;
+        line-height: 1.8rem;
+      }
+    }
+  }
+}

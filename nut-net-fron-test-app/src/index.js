@@ -8,6 +8,7 @@ import './nullStyle.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './globalStyles.scss'
 
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

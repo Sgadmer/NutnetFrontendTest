@@ -1,5 +1,7 @@
+@import "./globalVariables.scss";
 html {
   font-size: 16px;
+  cursor: default;
 }
 
 .contentWrapper {
@@ -11,5 +13,24 @@ html {
 a {
   &:hover {
     cursor: pointer;
+  }
+}
+
+.cyanButton {
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Hammersmith One", sans-serif;
+  color: $cyanColor;
+  border: 1px solid $cyanColor;
+  height: 51px;
+  min-width: 120px;
+  width: max-content;
+  padding: 0 20px;
+
+  &:hover {
+    color: $cyanColor;
   }
 }

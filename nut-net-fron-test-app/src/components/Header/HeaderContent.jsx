@@ -12,7 +12,9 @@ function HeaderContent() {
         amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum
         velit.
       </p>
-      <a href='/#' className="headerContent__learnMore-BTN">LEARN MORE</a>
+      <a href="/#" className="cyanButton headerContent__learnMORE-BTN">
+        LEARN MORE
+      </a>
     </div>
   );
 }

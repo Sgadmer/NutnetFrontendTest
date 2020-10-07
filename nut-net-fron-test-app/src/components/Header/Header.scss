@@ -60,27 +60,18 @@
     }
 
     &__content {
-      max-width: 1030px;
+      max-width: 900px;
+      line-height: 2.08rem;
       text-align: center;
-      letter-spacing: 0.05em;
-      font-size: 1.16rem;
+      letter-spacing: 0.005em;
+      font-size: 1.1rem;
       font-family: "Roboto", sans-serif;
       font-weight: 350;
       color: $brightColor;
     }
 
-    &__learnMore-BTN {
-      height: 51px;
-      width: 141px;
+    &__learnMORE-BTN {
       margin: 50px 0 207px;
-      font-size: 1.3rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      font-family: "Hammersmith One", sans-serif;
-      color: $cyanColor;
-      border: 1px solid $cyanColor;
     }
   }
 }
