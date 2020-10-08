@@ -65,6 +65,7 @@
           letter-spacing: 0.05em;
           text-align: center;
           margin: 0;
+          max-width: 100%; //Для адекватного переноса текста в IE
         }
       }
 
