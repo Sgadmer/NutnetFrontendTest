@@ -1,6 +1,6 @@
 @import "../../globalVariables.scss";
 
-.WatchOurStory {
+.watchOurStory {
   height: 550px;
   background: url(WatchOurStoryBG.png) 100% 100% $purpleColor;
   background-size: cover;
@@ -30,7 +30,7 @@
     margin-top: 34px;
     color: $brightColor;
     font-size: 1.3rem;
-    font-family: "Roboto", sans-serif;
+    @extend %fontRoboto;
     font-weight: 600;
     letter-spacing: 0.05em;
   }
@@ -56,13 +56,14 @@
     justify-content: center;
     align-items: center;
     animation: promoVideoMounted 1s ease;
+    z-index: 1;
 
     @keyframes promoVideoMounted {
-      0%{
+      0% {
         opacity: 0;
       }
 
-      100%{
+      100% {
         opacity: 1;
       }
     }

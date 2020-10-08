@@ -7,7 +7,7 @@ function OurStory() {
   return (
     <div className="ourStoryWrapper">
       <div className="ourStory contentWrapper">
-        <img className="ourStory__logo" src={logo} />
+        <img className="ourStory__logo" src={logo} alt="OurStoryLogo"/>
         <div className="ourStory__content">
           <h1>OUR STORY</h1>
           <p>

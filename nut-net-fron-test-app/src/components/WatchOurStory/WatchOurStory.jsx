@@ -5,14 +5,14 @@ import PlayTriangle from "./triangle.png";
 function WatchOurStory() {
   const [isVideoOpen, SetIsVideoOpen] = useState(false);
   return (
-    <div className="WatchOurStory">
+    <div className="watchOurStory">
       <div
-        className="WatchOurStory__videoOpen-BTN"
+        className="watchOurStory__videoOpen-BTN"
         onClick={() => SetIsVideoOpen(true)}
       >
-        <img src={PlayTriangle} />
+        <img src={PlayTriangle} alt="watchOurStory" />
       </div>
-      <h2 className="WatchOurStory__PromoText">WATCH OUR STORY</h2>
+      <h2 className="watchOurStory__PromoText">WATCH OUR STORY</h2>
 
       {isVideoOpen && (
         <div className="promoVideo">
@@ -25,9 +25,10 @@ function WatchOurStory() {
             width="560"
             height="315"
             src="https://www.youtube.com/embed/KvUgaHTNit4"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
+            title="PromoVideo"
           ></iframe>
         </div>
       )}

@@ -1,0 +1,109 @@
+@import "../../globalVariables.scss";
+
+.expertise {
+  padding: 71px 0 101px 0;
+  background-color: $brightColor;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__header {
+    @extend %fontPlayFair;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $darkColor;
+    margin-bottom: 12px;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: $darkAshPurpleColor;
+    @extend %fontPlayFair;
+    letter-spacing: 0.05em;
+    margin-bottom: 41px;
+    font-weight: 500;
+
+    &::after {
+      background-color: $ashColor;
+      margin-top: 18px;
+    }
+  }
+
+  .expertiseCards {
+    .row {
+      .card {
+        border: none;
+        cursor: default;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 39px 0;
+
+        &__iconWrapper {
+          width: 52px;
+          height: 49px;
+          overflow: hidden;
+          background: url(ExpertiseIcons.png) $brightColor;
+          margin-bottom: 35px;
+        }
+
+        &__header {
+          @extend %fontRoboto;
+          color: $darkColor;
+          font-size: 1.1rem;
+          font-weight: 700;
+          margin-bottom: 26px;
+        }
+
+        &__textContent {
+          @extend %fontRoboto;
+          color: $darkAshPurpleColor;
+          font-weight: 300;
+          letter-spacing: 0.05em;
+          text-align: center;
+          margin: 0;
+        }
+      }
+
+      &__hr {
+        margin: 0;
+        border: 0;
+        border-top: 1px solid $lightAshColor;
+      }
+
+      .card1 {
+        .card__iconWrapper {
+          background-position: 1px;
+        }
+      }
+      .card2 {
+        .card__iconWrapper {
+          background-position: -71px;
+        }
+      }
+      .card3 {
+        .card__iconWrapper {
+          background-position: -130.5px;
+        }
+      }
+      .card4 {
+        .card__iconWrapper {
+          background-position: -191px;
+        }
+      }
+      .card5 {
+        .card__iconWrapper {
+          background-position: -258.5px;
+        }
+      }
+      .card6 {
+        .card__iconWrapper {
+          background-position: -325.8px;
+        }
+      }
+    }
+  }
+}

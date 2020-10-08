@@ -1,4 +1,19 @@
 $purpleColor: #333366;
 $brightColor: white;
 $cyanColor: #00e0d0;
-$darkColor:#413d4b;
+$darkColor: #413d4b;
+$ashColor: #c6c4c9;
+$lightAshColor: #ebebeb;
+$darkAshPurpleColor: #2f2d35;
+
+%fontRoboto {
+  font-family: "Roboto", sans-serif;
+}
+
+%fontPlayFair {
+  font-family: "Playfair Display", serif;
+}
+
+%FontHammersmith {
+  font-family: "Hammersmith One", sans-serif;
+}
