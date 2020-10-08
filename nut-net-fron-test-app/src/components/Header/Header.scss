@@ -1,5 +1,16 @@
 @import "../../globalVariables.scss";
 
+%beforeNavBTNPattern {
+  transition: all 0.3s;
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: rotate(180deg);
+  margin-top: 21px;
+  border-bottom: 1px solid $brightColor;
+  left: -100%;
+}
+
 .header {
   background: url(headerBG.png) 100% 100% $purpleColor;
   background-size: cover;
@@ -26,10 +37,26 @@
         letter-spacing: 0.025em;
         color: $brightColor;
         font-weight: 700;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+          @extend %beforeNavBTNPattern;
+        }
+
+        &:hover {
+          &::before {
+            left: 0;
+          }
+        }
       }
       .navigation__btn_active {
         @extend .navigation__btn;
         color: $cyanColor;
+
+         &::before {
+           border-bottom: 1px solid $cyanColor;
+        }
       }
     }
   }
