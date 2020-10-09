@@ -1,9 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./WatchOurStory.scss";
 import PlayTriangle from "./triangle.png";
 
 function WatchOurStory() {
   const [isVideoOpen, SetIsVideoOpen] = useState(false);
+
+  function handleClose(e) {
+    if (e) {
+      if (e.key !== "Escape") {
+        return;
+      }
+    }
+    SetIsVideoOpen(false);
+  }
+
+  useEffect(() => {
+    document.addEventListener("keydown", (e) => handleClose(e));
+    return () => {
+      document.removeEventListener("keydown", (e) => handleClose(e));
+    };
+  });
+
   return (
     <div className="watchOurStory">
       <div
@@ -18,7 +35,7 @@ function WatchOurStory() {
         <div className="promoVideo">
           <div
             className="promoVideo__close-BTN"
-            onClick={() => SetIsVideoOpen(false)}
+            onClick={() => handleClose()}
           />
           <iframe
             className="promoVideo__iframe"
