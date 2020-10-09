@@ -73,6 +73,10 @@ a:hover {
 ul li {
   list-style: none;
 }
+ol, ul {
+    padding-left: 0 !important;
+    margin-bottom: 0 !important;
+}
 img {
   vertical-align: top;
 }

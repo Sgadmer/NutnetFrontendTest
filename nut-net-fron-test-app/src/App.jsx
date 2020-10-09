@@ -5,9 +5,9 @@ import WatchOurStory from "./components/WatchOurStory/WatchOurStory";
 import Expertise from "./components/Expertise/Expertise";
 import OurTeam from "./components/OurTeam/OurTeam";
 import OurWorks from "./components/OurWorks/OurWorks";
+import Reviews from "./components/Reviews/Reviews";
 
 function App() {
-
   useEffect(() => {
     document.title = "Tajam";
   }, []);
@@ -19,7 +19,8 @@ function App() {
       <WatchOurStory />
       <Expertise />
       <OurTeam />
-      <OurWorks/>
+      <OurWorks />
+      <Reviews />
     </>
   );
 }

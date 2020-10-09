@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 
   .worksHeader {
     display: flex;
@@ -33,7 +34,7 @@
         }
 
         50% {
-          right: -40px;
+          right: -35px;
         }
 
         100% {
@@ -67,12 +68,15 @@
   .worksPhoto {
     width: 100vw;
     margin-bottom: 70px;
+    cursor: pointer;
+
     .row {
       justify-content: center;
       .workPhoto {
         height: 200px;
         background-color: $darkAshColor;
         border: 1px solid $brightColor;
+        padding: 0;
 
         &:hover {
           transition: all 0.5s;
