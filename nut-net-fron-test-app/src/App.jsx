@@ -4,6 +4,7 @@ import OurStory from "./components/OurStory/OurStory";
 import WatchOurStory from "./components/WatchOurStory/WatchOurStory";
 import Expertise from "./components/Expertise/Expertise";
 import OurTeam from "./components/OurTeam/OurTeam";
+import OurWorks from "./components/OurWorks/OurWorks";
 
 function App() {
 
@@ -17,7 +18,8 @@ function App() {
       <OurStory />
       <WatchOurStory />
       <Expertise />
-      <OurTeam/>
+      <OurTeam />
+      <OurWorks/>
     </>
   );
 }

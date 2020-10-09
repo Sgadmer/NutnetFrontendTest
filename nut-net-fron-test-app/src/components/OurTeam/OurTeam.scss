@@ -41,6 +41,7 @@
 
           &:hover {
             transform: translateY(-15px);
+            cursor: pointer;
 
             .teammateCard__avatar {
               background-color: $darkColor;

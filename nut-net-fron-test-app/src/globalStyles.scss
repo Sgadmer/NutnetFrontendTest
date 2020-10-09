@@ -3,13 +3,17 @@ html {
   font-size: 16px;
   cursor: default;
   scroll-behavior: smooth;
+  background-color: $brightColor;
+}
+
+body{
+  background-color: $brightColor;
 }
 
 
 .contentWrapper {
   min-width: 942px;
-  width: 58.88%;
-  max-width: 1920px;
+  max-width: 58.88%;
 }
 
 a {

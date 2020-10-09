@@ -1,0 +1,84 @@
+@import "../../globalVariables.scss";
+
+.ourWorks {
+  padding: 70px 0;
+  background-color: $brightColor;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .worksHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 71px;
+
+    &__topic {
+      @include mixPlayFair($darkColor, 1.83rem, 0.05em, 600);
+    }
+
+    &__seeAllProjects-BTN {
+      @include mixRoboto($darkColor, 1.16rem, 0.05em, 400);
+      position: relative;
+
+      &:hover {
+        &::before,
+        &::after {
+          animation: beforeAfterHoverAnim 0.5s ease infinite;
+        }
+      }
+
+      @keyframes beforeAfterHoverAnim {
+        0% {
+          right: -24px;
+        }
+
+        50% {
+          right: -40px;
+        }
+
+        100% {
+          right: -24px;
+        }
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        width: 12px;
+        height: 2px;
+        background-color: #4c4c4c;
+        position: absolute;
+        right: -24px;
+        top: 30%;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+        top: 19%;
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+        top: 37%;
+      }
+    }
+  }
+
+  .worksPhoto {
+    width: 100vw;
+    margin-bottom: 70px;
+    .row {
+      justify-content: center;
+      .workPhoto {
+        height: 200px;
+        background-color: $darkAshColor;
+        border: 1px solid $brightColor;
+
+        &:hover {
+          transition: all 0.5s;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
