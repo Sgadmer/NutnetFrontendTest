@@ -33,6 +33,7 @@
   }
 
   .expertiseCards {
+    padding: 0 70px;
     .row {
       .card {
         border: none;
@@ -56,6 +57,7 @@
           font-size: 1.1rem;
           font-weight: 700;
           margin-bottom: 26px;
+          text-align: center;
         }
 
         &__textContent {

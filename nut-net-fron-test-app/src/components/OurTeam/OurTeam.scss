@@ -1,0 +1,86 @@
+@import "../../globalVariables.scss";
+
+.ourTeamWrapper {
+  padding: 71px 0 69px;
+  background: url(OurTeamBG.png) 100% 100% $purpleColor;
+  background-size: cover;
+  @extend %flexAllCenter;
+  text-align: center;
+
+  .ourTeam {
+     display: flex;
+          flex-direction: column;
+          align-items: center;
+    &__header {
+      @include mixPlayFair($brightColor, 1.83rem, 0.005em, 700);
+      margin-bottom: 18px;
+    }
+    &__description {
+      @include mixPlayFair($brightColor, 1.16rem, 0.075em, 300);
+      @extend %flexAllCenter;
+      flex-direction: column;
+      &::after {
+        background-color: $lightHighlyTransparent;
+        margin-top: 18px;
+      }
+    }
+
+    .teamCards {
+      width: 100%;
+      .row {
+        justify-content: space-around;
+        padding: 0 10px;
+        .teammateCard {
+          margin-top: 47px;
+          min-width: 220px;
+          max-width: 90%;
+          padding: 0%;
+          display: flex;
+          flex-direction: column;
+          transition: all 0.5s;
+
+          &:hover {
+            transform: translateY(-15px);
+
+            .teammateCard__avatar {
+              background-color: $darkColor;
+            }
+          }
+
+          &__avatar {
+            transition: all 0.5s;
+            background-color: $brightColor;
+            height: 228px;
+          }
+
+          .description {
+            height: 79px;
+            border: 1px solid $lightHighlyTransparent;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            &__header {
+              @include mixRoboto($brightColor, 1.1rem, 0.05em, 600);
+              margin-bottom: 4px;
+            }
+
+            &__paragraph {
+              @include mixRoboto($dirtyWhiteHalfTransparent, 1.08rem, 0, 300);
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+
+    &__description2 {
+      @include mixRoboto($dirtyWhiteHalfTransparent, 1.16rem, 0.05em, 400);
+      margin-top: 70px;
+    }
+
+    &__hiring-BTN {
+      margin-top: 26px;
+    }
+  }
+}

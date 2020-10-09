@@ -3,6 +3,7 @@ import Header from "./components/Header/Header";
 import OurStory from "./components/OurStory/OurStory";
 import WatchOurStory from "./components/WatchOurStory/WatchOurStory";
 import Expertise from "./components/Expertise/Expertise";
+import OurTeam from "./components/OurTeam/OurTeam";
 
 function App() {
 
@@ -15,7 +16,8 @@ function App() {
       <Header />
       <OurStory />
       <WatchOurStory />
-      <Expertise/>
+      <Expertise />
+      <OurTeam/>
     </>
   );
 }
