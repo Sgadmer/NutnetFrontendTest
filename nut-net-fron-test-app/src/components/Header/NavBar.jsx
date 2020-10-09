@@ -4,7 +4,7 @@ import logo from "./headerLogo.png";
 function NavBar() {
     return (
 
-        <div className="navBar  contentWrapper">
+        <nav className="navBar  contentWrapper">
           <a href="/#" className="navBar__logo">
             <img src={logo} alt="HeaderLogo" />
           </a>
@@ -32,7 +32,7 @@ function NavBar() {
               CONTACT
             </a>
           </div>
-        </div>
+        </nav>
         
 
     );

@@ -22,7 +22,7 @@
     align-items: center;
     color: $darkAshPurpleColor;
     @extend %fontPlayFair;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.075em;
     margin-bottom: 41px;
     font-weight: 500;
 
@@ -62,8 +62,9 @@
           @extend %fontRoboto;
           color: $darkAshPurpleColor;
           font-weight: 300;
-          letter-spacing: 0.05em;
+          letter-spacing: 0.075em;
           text-align: center;
+          line-height: 21.3px;
           margin: 0;
           max-width: 100%; //Для адекватного переноса текста в IE
         }
