@@ -6,6 +6,7 @@ import Expertise from "./components/Expertise/Expertise";
 import OurTeam from "./components/OurTeam/OurTeam";
 import OurWorks from "./components/OurWorks/OurWorks";
 import Reviews from "./components/Reviews/Reviews";
+import FeedbackForm from "./components/FeedbackForm/FeedbackForm";
 
 function App() {
   useEffect(() => {
@@ -21,6 +22,7 @@ function App() {
       <OurTeam />
       <OurWorks />
       <Reviews />
+      <FeedbackForm />
     </>
   );
 }

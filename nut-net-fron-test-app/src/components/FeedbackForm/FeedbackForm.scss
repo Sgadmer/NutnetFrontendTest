@@ -1,0 +1,75 @@
+@import "../../globalVariables.scss";
+
+.feedbackFormWrapper {
+  margin: 65px 0 75px;
+  background-color: $brightColor;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .feedbackFormHeader {
+    @include mixPlayFair($darkColor, 1.83rem, 0.05em, 700);
+    width: 100%;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  .feedbackForm {
+    width: 590px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__nameInput,
+    &__emailInput,
+    &__subjectInput,
+    &__textArea {
+      width: 100%;
+      border: 1px solid $brightAshColor;
+      padding-left: 21px;
+      margin-bottom: 22px;
+
+      &::placeholder {
+        @include mixRoboto($placeholderGray, 1.1rem, 0.05em, 400);
+      }
+    }
+
+    &__nameInput,
+    &__emailInput,
+    &__subjectInput {
+      height: 47px;
+    }
+
+    &__textArea {
+      height: 200px;
+      resize: none;
+      padding-top: 22px;
+      overflow: auto;
+
+      &::-moz-placeholder {
+        /* Firefox 19+ */
+        color: $placeholderGrayFireFox;
+      }
+    }
+
+    &__submi-BTN{
+      padding: 0 33px;
+    }
+  }
+
+  .formSubmitted{
+    overflow: hidden;
+    animation: formSubmittedAnim 4s ease;
+    margin-bottom: -100%;
+  }
+
+  @keyframes formSubmittedAnim {
+    0%{
+      margin-bottom: 0;
+    }
+
+    100%{
+       margin-bottom: -100%;
+    }
+  }
+}
