@@ -18,6 +18,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: start;
+  position: relative;
 
   .navBar {
     display: flex;
@@ -27,7 +28,6 @@
 
     .navigation {
       width: 652px;
-
       display: flex;
       justify-content: space-between;
 
@@ -69,22 +69,23 @@
 
     &__topic {
       @extend %fontPlayFair;
-      font-size: 2.6rem;
-      color: $brightColor;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
+      text-align: center;
+      width: 100%;
+      font-size: 2.6rem;
+      color: $brightColor;
       letter-spacing: 0.001em;
       margin-bottom: 30px;
 
       &::after {
         background-color: $cyanColor;
-        margin-top: 21px;
+        margin: 21px auto 0 auto;
       }
     }
 
     &__content {
+      width: 100%;
       max-width: 900px;
       line-height: 2.08rem;
       text-align: center;
@@ -97,6 +98,87 @@
 
     &__learnMORE-BTN {
       margin: 50px 0 207px;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .header {
+    .navBar {
+      .navigation {
+        transition: all 1s;
+        width: 100%;
+        position: fixed;
+        top: -100%;
+        flex-direction: column;
+        justify-content: start;
+        background-color: $backgroundPurple;
+        border-radius: 10px;
+        left: 0;
+        z-index: 2;
+        display: none;
+
+        .navigation__btn {
+          padding: 3vh 15px;
+          border: 1px solid $brightColor;
+          border-radius: 10px;
+
+          &::before {
+            display: none;
+          }
+
+          &:hover {
+            text-decoration: underline !important;
+          }
+        }
+
+        .navbarToggle-BTN {
+          position: fixed;
+          display: block;
+          right: 31px;
+          z-index: 2;
+        }
+      }
+
+      .navigation__showed {
+        display: flex;
+        top: 80px;
+        animation: navigationAppereance 1s ease;
+      }
+
+      @keyframes navigationAppereance {
+        0% {
+          top: -100%;
+        }
+
+        100% {
+          top: 80px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-height: 470px) {
+  .header {
+    .navBar {
+      .navigation {
+        .navigation__btn {
+          padding: 2vh 15px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-height: 370px) {
+  .header {
+    .navBar {
+      .navigation {
+        .navigation__btn {
+          padding: 1vh 15px;
+        }
+      }
     }
   }
 }

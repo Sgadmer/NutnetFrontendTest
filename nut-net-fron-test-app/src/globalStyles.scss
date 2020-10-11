@@ -4,12 +4,14 @@ html {
   cursor: default;
   scroll-behavior: smooth;
   background-color: $brightColor;
+  overflow-x: hidden !important;
 }
 
-body{
+body {
   background-color: $brightColor;
-}
+  overflow-x: hidden !important;
 
+}
 
 .contentWrapper {
   min-width: 942px;
@@ -49,5 +51,13 @@ a {
     content: "";
     width: 65px;
     height: 2px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .contentWrapper {
+    min-width: 100%;
+    max-width: 100%;
+    padding: 0 10px;
   }
 }

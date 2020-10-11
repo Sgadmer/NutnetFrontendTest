@@ -16,10 +16,9 @@
   }
 
   &__description {
+    text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     color: $darkAshPurpleColor;
     @extend %fontPlayFair;
     letter-spacing: 0.075em;
@@ -28,7 +27,7 @@
 
     &::after {
       background-color: $ashColor;
-      margin-top: 18px;
+      margin: 18px auto 0 auto;
     }
   }
 
@@ -109,6 +108,14 @@
           background-position: -323.5px;
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .expertise {
+    &__description {
+      max-width: 90vw;
     }
   }
 }

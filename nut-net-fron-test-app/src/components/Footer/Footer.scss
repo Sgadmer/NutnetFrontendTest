@@ -34,11 +34,9 @@
 
       &__companyInfo,
       &__companyLocation,
-      &__socialNetworks{
+      &__socialNetworks {
         padding: 0 12px;
       } //для  IE
-
-
 
       &__companyInfo {
         .companyLogo {
@@ -213,6 +211,82 @@
       .copyRights {
         @include mixRoboto($brightColor, 1rem, 0.025em, 300);
         text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .footer {
+    p,
+    h2,
+    a {
+      text-align: center;
+    }
+
+    p{
+      max-width: 100%;
+    }
+
+    .footerContentWrapper {
+      .footerContent {
+        align-items: center;
+        justify-content: space-between;
+
+        &__companyInfo {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 40px;
+        }
+        &__companyLocation {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 40px;
+
+          .locationHeader {
+            margin-bottom: 10px;
+          }
+
+          .location {
+            &__info,
+            &__phone {
+              max-width: 100vw;
+              display: flex;
+              justify-content: center;
+            }
+          }
+        }
+
+        &__socialNetworks {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .socialNetworksHeader {
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+      .companyLinksAndCopyrights {
+        .companyLinks {
+          justify-content: center;
+          margin-left: 0;
+          padding-right: 0;
+
+          &__linkWrapper {
+            &:nth-child(2){
+                margin: 0 4vw;
+              }
+          }
+        }
+
+        .copyRights {
+          margin-top: 10px;
+
+        }
       }
     }
   }
