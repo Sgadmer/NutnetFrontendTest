@@ -5,10 +5,10 @@ import HeaderContent from "./HeaderContent";
 
 function Header() {
   return (
-    <div className="header">
+    <header className="header">
       <NavBar />
       <HeaderContent />
-    </div>
+    </header>
   );
 }
 

@@ -7,6 +7,7 @@ import OurTeam from "./components/OurTeam/OurTeam";
 import OurWorks from "./components/OurWorks/OurWorks";
 import Reviews from "./components/Reviews/Reviews";
 import FeedbackForm from "./components/FeedbackForm/FeedbackForm";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   useEffect(() => {
@@ -23,6 +24,7 @@ function App() {
       <OurWorks />
       <Reviews />
       <FeedbackForm />
+      <Footer/>
     </>
   );
 }

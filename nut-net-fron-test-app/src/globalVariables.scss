@@ -10,6 +10,8 @@ $lightHighlyTransparent: rgba(255, 255, 255, 0.2);
 $dirtyWhiteHalfTransparent: #fafafa9f;
 $placeholderGray:#acabb1;
 $placeholderGrayFireFox:#565558;
+$footerInput:#ffffff80;
+$footerInputPlaceholder:#cecbd7;
 
 %fontRoboto {
   font-family: "Roboto", sans-serif;
@@ -44,4 +46,3 @@ $placeholderGrayFireFox:#565558;
   letter-spacing: $letSpace;
   font-weight: $weight;
 }
-

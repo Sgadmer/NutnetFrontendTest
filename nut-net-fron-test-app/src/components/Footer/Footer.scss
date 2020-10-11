@@ -1,0 +1,219 @@
+@import "../../globalVariables.scss";
+
+.footer {
+  background: url(footerBG.png) 100% 100% $purpleColor;
+  background-size: cover;
+  padding: 70px 0 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    @include mixRoboto($brightColor, 1rem, 0.05em, 600);
+    line-height: 26pt;
+  }
+
+  p,
+  a {
+    @include mixRoboto($brightColor, 1rem, 0.025em, 300);
+    line-height: 26pt;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .footerContentWrapper {
+    padding: 0 10px;
+
+    .footerContent {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 70px;
+      justify-content: space-between;
+
+      &__companyInfo,
+      &__companyLocation,
+      &__socialNetworks{
+        padding: 0 12px;
+      } //для  IE
+
+
+
+      &__companyInfo {
+        .companyLogo {
+          margin-bottom: 27px;
+        }
+      }
+      &__companyLocation {
+        .locationHeader {
+          margin-bottom: 42px;
+        }
+
+        .location {
+          &__info,
+          &__phone {
+            display: flex;
+          }
+
+          &__info {
+            .locationPin {
+              min-width: 14px;
+              max-width: 14px; // для IE
+              height: 19px;
+              margin-right: 16px;
+              margin-top: 6px;
+              transform: scale(1.3);
+            }
+          }
+
+          &__phone {
+            .phonePin {
+              height: 17px;
+              width: 17px;
+              transform: scale(1.3);
+              margin-right: 12px;
+              margin-top: 6px;
+            }
+          }
+        }
+      }
+      &__socialNetworks {
+        .socialNetworksHeader {
+          margin-bottom: 52px;
+        }
+
+        .subscriptionForm {
+          display: flex;
+          &__input {
+            min-width: 215.5px;
+            max-width: 215.5px;
+            height: 45px;
+            padding-left: 15px;
+            margin-right: 10px;
+            margin-bottom: 27px;
+            border: 1px solid $footerInput;
+            background-color: transparent;
+            @include mixRoboto($brightColor, 1.1rem, 0.05em, 300);
+
+            &::placeholder {
+              @include mixRoboto($footerInputPlaceholder, 0.93rem, 0.02em, 300);
+            }
+          }
+
+          &__submit-BTN {
+            transition: all 0.5s;
+            min-width: 70px;
+            max-width: 70px;
+            min-height: 45px;
+            max-height: 45px;
+            @extend %flexAllCenter;
+            background-color: $footerInput;
+            cursor: pointer;
+
+            &:hover {
+              background-color: $brightColor;
+              .papperPlane {
+                transform: translate(12px, -9px);
+              }
+            }
+
+            .papperPlane {
+              transition: all 0.5s;
+            }
+          }
+        }
+
+        .socialNetworksLinks {
+          width: 251px;
+          display: flex;
+          justify-content: space-between;
+
+          .link {
+            transition: all.3s;
+            width: 35px;
+            height: 35px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid $brightColor;
+            border-radius: 50%;
+
+            &:hover {
+              box-shadow: 0px 0px 20px -6px $brightColor inset;
+            }
+
+            &__icon {
+              background-image: url(sprite.png);
+            }
+
+            .icon-1Facebook {
+              background-position: 0px -30px;
+              width: 7px;
+              height: 15px;
+            }
+            .icon-2Twitter {
+              background-position: -31px -11px;
+              width: 14px;
+              height: 11px;
+            }
+            .icon-3Dribbble {
+              background-position: 0px 0px;
+              width: 16px;
+              height: 16px;
+            }
+            .icon-4Instagram {
+              background-position: -16px 0px;
+              width: 15px;
+              height: 15px;
+            }
+            .icon-5Google {
+              background-position: 0px -16px;
+              width: 15px;
+              height: 14px;
+            }
+            .icon-6Youtube {
+              background-position: -31px 0px;
+              width: 17px;
+              height: 11px;
+            }
+          }
+        }
+      }
+    }
+
+    .companyLinksAndCopyrights {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0;
+
+      .companyLinks {
+        margin-left: 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__linkWrapper {
+          .link {
+            transition: all 0.3s;
+            text-align: center;
+            font-weight: 400;
+
+            &:hover {
+              text-shadow: 0 0 10px $brightColor;
+              color: $brightColor;
+            }
+          }
+        }
+      }
+
+      .copyRights {
+        @include mixRoboto($brightColor, 1rem, 0.025em, 300);
+        text-align: center;
+      }
+    }
+  }
+}
